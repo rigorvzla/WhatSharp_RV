@@ -13,7 +13,6 @@ namespace WhatSharp_RV
         private const uint MOUSEEVENTF_LEFTDOWN = 0x0002;
         private const uint MOUSEEVENTF_LEFTUP = 0x0004;
 
-        [Obfuscation(Exclude = true)]
         public static void Message(string Telefono, string Mensaje)
         {
             Process.Start($"https://web.whatsapp.com/send?phone=+{Telefono}&text={Mensaje}");
@@ -36,7 +35,6 @@ namespace WhatSharp_RV
             Console.ReadKey();
         }
 
-        [Obfuscation(Exclude = true)]
         public static void MessageGroup(string Codigo, string Mensaje)
         {
             Process.Start($"https://web.whatsapp.com/accept?code={Codigo}");
